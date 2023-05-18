@@ -64,17 +64,16 @@
 
 .projectStickyText {
   position: sticky;
-  top: 7%;
+  top: 8%;
 }
 
 .projectCards .smallText span {
   padding: 62px 120px 0 0;
-  margin-bottom: 16px;
   line-height: 1.55;
   color: #d6d6db;
-  margin-bottom: 16px;
   font-size: 18px;
   font-weight: 400;
+  margin-bottom: 16px;
 }
 
 .projectCards .largeText {
@@ -84,10 +83,10 @@
 .projectCards .largeText h3 {
   letter-spacing: -0.25px;
   margin-bottom: 16px;
-  line-height: 1.55;
+  line-height: 1.33;
   color: white;
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .projectImgBox {
@@ -188,10 +187,10 @@ h2.featured_highlight:hover {
   background-position: 10% 0.6em;
 }
 
-h2.featured_highlight a{
-    font-size: 26px;
-font-weight: 400;
-letter-spacing: -0.15px;
+h2.featured_highlight a {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -0.15px;
 }
 
 @media (max-width: 1000px) {
