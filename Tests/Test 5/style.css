@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.video{
+  left: 0;
+  top: 0;
+
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.video.active{
+
+  animation: videoOpen 4s ease 1 forwards;
+
+}
+
+.video.closing{
+  animation: videoClose 4s ease 1 forwards ;
+}
+
+.videoContainer{
+  width: 200px;
+  height: 200px;
+
+  border: 2px solid darkcyan;
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  position: absolute;
+}
+
+@keyframes videoOpen {
+  0%{
+    clip-path: circle(100px at 100px 100px);
+  }
+  100%{
+    clip-path: circle(100% at 50% 50%)
+  }
+}
+
+@keyframes videoClose {
+  100%{
+    clip-path: circle(100px at 100px 100px);
+    visibility: hidden;
+  }
+  0%{
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+

@@ -1,0 +1,297 @@
+.processSection{
+  z-index: 1;
+  position: relative;
+}
+
+.processHeaderContainer {
+  position: relative;
+
+  width: 88%;
+  margin-left: 6%;
+  margin-top: 18%;
+
+  /* border: 2px solid forestgreen; */
+}
+
+.processHeaderContainer .heroTitle {
+  background-image: linear-gradient(
+    90deg,
+    rgb(64, 117, 253),
+    rgb(244, 102, 196)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  font-size: 150px;
+  font-weight: 600;
+  letter-spacing: -4px;
+  line-height: 180px;
+  margin-bottom: 12px;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.processHeaderContainer h2 {
+  color: white;
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: -0.778846px;
+  line-height: 1.19;
+
+  margin-bottom: 40px;
+}
+
+.processHeaderContainer .subText {
+  color: rgb(214, 214, 219);
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -0.15px;
+  line-height: 1.48;
+
+  width: 70%;
+}
+
+.videoContainer {
+  width: 200px;
+  height: 200px;
+
+  border: 2px solid greenyellow;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  position: absolute;
+
+  top: 25%;
+  right: 5%;
+  /* transform: translateY(-50%); */
+
+  cursor: none;
+}
+
+.videoContainer span {
+  position: absolute;
+
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+}
+
+.videoContainer img {
+  visibility: hidden;
+  position: absolute;
+}
+
+.videoContainer:hover {
+  background-image: url("../Assets/Process Section Assets/video-reel.png");
+  background-size: cover;
+  background-repeat: repeat;
+
+  animation: bgScroll 1s infinite forwards linear;
+}
+
+.videoContainer:hover img {
+  visibility: visible;
+}
+
+.videoContainer:hover span {
+  visibility: hidden;
+}
+
+@keyframes bgScroll {
+  0% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position-x: -130%;
+  }
+}
+
+.video {
+  z-index: 10;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  visibility: hidden;
+  width: 100%;
+}
+
+.video.active {
+  animation: videoOpen 1s ease-out 1 forwards;
+}
+
+.video.closing {
+  animation: videoClose 1s ease-in 1 forwards;
+}
+
+@keyframes videoOpen {
+  0% {
+    clip-path: circle(100px at 85% 50%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+
+@keyframes videoClose {
+  100% {
+    clip-path: circle(100px at 85% 50%);
+    visibility: hidden;
+  }
+  0% {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+
+.processContainer {
+  /* border: 2px solid darkorange; */
+  z-index: 2;
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  width: 88%;
+  height: 720px;
+
+  margin-left: 6%;
+  margin-top: 100px;
+}
+
+.processContainer .contentTile {
+  overflow: hidden;
+
+  display: flex;
+  position: relative;
+
+  border: 1px solid grey;
+  border-right: none;
+
+  width: 10.45%;
+  height: 700px;
+
+  transition: width 0.4s ease;
+}
+
+.processContainer .contentTile.active {
+  width: 47.79%;
+
+  background-color: white;
+
+  border-color: black;
+}
+
+.contentTile .contentTileTitle {
+  width: 88px;
+  height: 700px;
+
+  display: flex;
+
+  align-items: end;
+  justify-content: center;
+}
+
+.processContainer .contentTile .titleWrapper {
+  transform: rotate(-90deg) translateX(-40%);
+}
+
+.contentTile .contentTileTitle span {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.25px;
+  line-height: 48px;
+
+  color: white;
+
+  padding-left: 100%;
+
+  transition: all 0.4s linear;
+
+  text-transform: capitalize;
+}
+
+.contentTile .contentTileTitle:hover {
+  cursor: pointer;
+}
+.contentTile .contentTileTitle:hover span {
+  color: rgb(156, 158, 169);
+}
+.contentTile.active .contentTileTitle span {
+  color: black;
+}
+
+.contentTile .contentTileTitle span::before {
+  content: "";
+
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  line-height: 28px;
+
+  margin-right: 20px;
+}
+
+#discoveryTileSpan::before {
+  content: "01";
+}
+#strategyTileSpan::before {
+  content: "02";
+}
+#designTileSpan::before {
+  content: "03";
+}
+#programmingTileSpan::before {
+  content: "04";
+}
+#evaluationTileSpan::before {
+  content: "05";
+}
+#launchTileSpan::before {
+  content: "06";
+}
+
+.contentTile .contentTileData {
+  left: 88px;
+
+  background-color: white;
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 35vw;
+  height: 700px;
+}
+
+.contentTile .contentTileDataHolder {
+  width: 80%;
+}
+
+.contentTile .contentTileData p {
+  color: #16171a;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27.9px;
+  margin-top: 32px;
+}
+
+.contentTile .contentTileData h1 {
+  color: #16171a;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.15px;
+  line-height: 38.4833px;
+  margin-bottom: 40px;
+}

@@ -1,0 +1,295 @@
+* {
+  margin: 0%;
+  border: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  --vidWidth: 978px;
+  --left: 7%;
+}
+
+.navbar {
+  z-index: 10;
+  margin-top: 1%;
+  position: fixed;
+
+  top: 0;
+  margin-top: 0;
+
+  display: flex;
+  flex-wrap: nowrap;
+
+  align-items: center;
+
+  height: 120px;
+  width: 100%;
+
+  /* border: 2px solid salmon; */
+
+  transition: all 0.6s ease;
+}
+
+.navbar.pinned {
+  margin: 0;
+  background-color: white;
+  height: 65px;
+
+  border-bottom: 1px solid grey;
+}
+
+.logo {
+  background: url("../Assets/Navigation Bar and Banner/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  position: relative;
+
+  width: 100px;
+  height: 100%;
+  left: 7%;
+
+  /* border: 2px solid yellow; */
+
+  transition: all 0.6s ease;
+}
+
+.navbar.pinned > .logo {
+  filter: brightness(0) invert(0.14);
+  left: 5.5%;
+  transform: scale(0.75);
+}
+
+/* Navigation Buttons */
+.navMenu {
+  /* border: 2px solid cyan; */
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 50%;
+  height: 100%;
+  left: 37%;
+  /* right: 6%; */
+  overflow: hidden;
+}
+
+.navMenu a {
+  text-decoration: none;
+
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  line-height: 20px;
+
+  transition: all 0.3s ease;
+
+  background-repeat: no-repeat;
+  background-position: 0px 0.95em;
+  background-size: 100%;
+}
+
+.navMenu .dropdownBut a::after{
+  display: inline-block;
+  content: "";
+  background: url("../Assets/Navigation Bar and Banner/dropDown.svg") no-repeat;
+
+  width: 36px;
+  height: 36px;
+
+  position: absolute;
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
+.navbar.pinned .navMenu .dropdownBut a::after{
+  filter: invert(1);
+}
+
+.navbar.pinned > .navMenu a {
+  color: black;
+}
+
+.navMenu a:hover {
+  background-image: linear-gradient(45deg, #b4e300 100%, #b4e300 0);
+  background-position: 0px 0.8rem;
+}
+
+#startProjectBut {
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 2px solid blue; */
+  background: #b4e300;
+  height: 37px;
+  width: 188px;
+
+  transition: all 0.8s ease;
+}
+
+#startProjectBut:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.scrolltext {
+  position: absolute;
+
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  line-height: 20px;
+}
+
+.scrolltext::before {
+  content: "";
+  line-height: 48px;
+  position: absolute;
+  top: 0;
+  left: -20%;
+  width: 100%;
+  will-change: transform;
+  z-index: 2;
+  background: url("https://cdn-eahjn.nitrocdn.com/ChEvwayTHZmZJUAdsUNMLXuXZdBprFoQ/assets/images/source/rev-b6fca84/app/themes/spinxdigital/assets/images/icon-email.svg")
+    no-repeat 0;
+font-weight: 500;
+background-size: 18px;
+height: 18px;
+
+}
+
+#stext1 {
+  padding: 0;
+  transform: translateX(141%);
+  /* border: 2px solid green; */
+  animation: scroll_text 8s 0ms infinite forwards linear;
+}
+
+#stext2 {
+  padding: 0;
+  transform: translateX(141%);
+  /* border: 3px solid turquoise; */
+  animation: scroll_text 8s 4s infinite forwards linear;
+}
+
+@keyframes scroll_text {
+  0% {
+    transform: translateX(141%);
+  }
+  100% {
+    transform: translateX(-141%);
+  }
+}
+
+.hamburger {
+  border: 2px solid firebrick;
+  position: absolute;
+  right: 2%;
+  display: none;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  background-color: white;
+}
+
+.navbar.pinned .bar {
+  background-color: black;
+}
+
+.hamburger :nth-child(3) {
+  width: 15px;
+  margin-left: 0;
+}
+
+@media (max-width: 1250px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    transform: translateX(40px) rotate(90deg);
+    visibility: hidden;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    width: 25px;
+    margin: 5px auto;
+    transform: translateY(-13px) rotate(-45deg);
+  }
+
+  .navMenu {
+    position: fixed;
+
+    flex-direction: column;
+    justify-content: left;
+    align-items: normal;
+
+    width: 100vw;
+    height: 100vh;
+    /* top: 13%; */
+    top: -100%;
+    left: 0;
+    background-color: white;
+
+    transition: all 0.3s ease;
+  }
+
+  .navMenu.active {
+    top: 13%;
+  }
+
+  .navbar.pinned .navMenu.active {
+    top: 64px;
+  }
+
+  .navBut {
+    padding: 20px;
+  }
+
+  #startProjectBut {
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+
+  #stext1 {
+    margin: 0;
+    padding: 0;
+  }
+  #stext2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navMenu a {
+    /* margin: 30px; */
+    color: black;
+    font-size: 34px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+}

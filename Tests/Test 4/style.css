@@ -1,0 +1,26 @@
+header{
+  margin-bottom: 100vh;
+}
+
+.media-scroller {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 38%;
+    gap: 6rem;
+    overflow-x: scroll;
+    border: 2px solid green;
+    
+    margin-bottom: 100vh ;
+  }
+
+/* general styling */
+
+.container {
+  inline-size: min(100% - 4rem, 70rem);
+  margin-inline: auto;
+}
+
+.flow {
+  display: grid;
+}
+

@@ -1,0 +1,131 @@
+.learnSectionHolder {
+  width: 88%;
+  height: fit-content;
+
+  margin-left: 6%;
+  margin-top: 200px;
+
+  /* border: 2px solid royalblue; */
+}
+
+.learnSectionHolder .learnSectionTitle {
+  background-image: linear-gradient(
+    90deg,
+    rgb(237, 47, 59),
+    rgb(247, 106, 65),
+    rgb(255, 190, 100)
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  font-size: 150px;
+  font-weight: 600;
+  letter-spacing: -4px;
+  line-height: 180px;
+}
+
+.learnSectionHolder .learnSectionCards {
+  border: 1px solid grey;
+  border-left: none;
+  border-right: none;
+
+  width: 100%;
+  height: fit-content;
+
+  overflow: hidden;
+
+  cursor: none;
+}
+
+.learnSectionHolder .learnSectionCards .learnSectionCardWrapper {
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  width: 78%;
+  margin-left: 6%;
+
+  /* border: 2px solid honeydew; */
+
+  transition: all 0.5s ease;
+}
+
+.learnSectionCards .learnSectionCardWrapper span {
+  display: block;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27.9px;
+
+  margin-bottom: 16px;
+
+  color: rgb(183, 184, 192);
+}
+
+.learnSectionCards .learnSectionCardWrapper a {
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: -0.778846px;
+  line-height: 1.19;
+
+  background-image: linear-gradient(45deg, rgb(109, 111, 120) 100%, rgb(109, 111, 120) 0px);
+  background-position: 0px 1.1em;
+  background-repeat: no-repeat;
+
+  transition: all 0.6s ease;
+}
+
+.learnSectionCards .learnSectionCardWrapper h5 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+
+  color: rgb(156, 158, 169);
+}
+
+/* .learnSectionCards:hover{
+    cursor: pointer;
+} */
+
+.learnSectionCards:hover .learnSectionCardWrapper{
+    transform: translateX(-6%);
+}
+
+.learnSectionCards:hover .learnSectionCardWrapper a{
+    cursor: none;
+    background-image: linear-gradient(45deg, rgb(109, 111, 120) 100%, rgb(109, 111, 120) 0px);
+  background-position: 0px 0.5em;
+}
+
+.learnCursorBG{
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+
+    transform: translate(-50%, -50%);
+
+    opacity: 0.5;
+
+    width: 25%;
+    aspect-ratio: 16/9;
+
+    pointer-events: none;
+}
+
+#learnSec2{
+    background: url("../Assets/Learn Images/Sec2BG.jpg");
+    background-size: cover;
+}
+
+#learnSec3{
+  background: url("../Assets/Learn Images/Sec3BG.jpg");
+  background-size: cover;
+}
+
+.learnSectionCards:hover .learnCursorBG{
+    visibility: visible;
+}

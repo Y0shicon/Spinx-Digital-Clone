@@ -1,0 +1,244 @@
+.WeAreIntroHeaderContainer {
+  width: 88%;
+  height: fit-content;
+
+  display: flex;
+
+  margin-top: 250px;
+  margin-left: 6%;
+
+  /* border: 2px solid darkgoldenrod; */
+}
+
+.WeAreIntroHeaderContainer .leftColumn {
+  width: 60%;
+  height: 100%;
+
+  /* border: 2px solid fuchsia; */
+}
+
+.leftColumn .heroHeader {
+  width: 100%;
+  height: fit-content;
+}
+
+.leftColumn .heroHeader h1 {
+    display: inline;
+
+  background-image: linear-gradient(
+    90deg,
+    rgb(14, 150, 238),
+    rgb(78, 235, 213),
+    rgb(253, 214, 141),
+    rgb(251, 140, 97)
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  font-size: 150px;
+  font-weight: 600;
+  letter-spacing: -4px;
+  line-height: 180px;
+  margin-bottom: 5px;
+}
+
+.leftColumn .subText {
+  width: 100%;
+  height: fit-content;
+}
+
+.leftColumn .subText h4 {
+  color: white;
+
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: -0.778846px;
+  line-height: 64.2667px;
+  margin-bottom: 48px;
+}
+
+.WeAreIntroHeaderContainer .leftColumn span {
+  color: white;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27.9px;
+}
+
+.WeAreIntroHeaderContainer .rightColumn {
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  /* border: 2px solid yellow; */
+}
+
+.rightColumn .workStat {
+  text-align: left;
+  width: fit-content;
+
+  margin-left: 25%;
+
+  /* border: 2px solid salmon; */
+}
+
+.rightColumn .workStat .statHeader {
+  color: white;
+
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: -0.778846px;
+  line-height: 64.2667px;
+  margin-bottom: 4px;
+}
+
+.rightColumn .workStat .statContent {
+  color: rgb(183, 184, 192);
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.weAreAttributesContainer {
+  margin-top: 200px;
+
+  width: 88%;
+  height: fit-content;
+
+  margin-left: 6%;
+
+  /* border: 2px solid red; */
+}
+
+.weAreAttributesContainer h4 {
+  color: rgb(156, 158, 169);
+
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.15px;
+  line-height: 38.4833px;
+  margin-bottom: 22px;
+}
+
+.weAreAttributesContainer h4 a {
+  color: rgb(156, 158, 169);
+
+  background-image: linear-gradient(45deg, #6d6f78 100%, #6d6f78 0);
+  background-position: 0% 1.2em;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  transition: all 0.4s ease;
+}
+
+.weAreAttributesContainer h4 a:hover {
+  color: white;
+
+  background-image: linear-gradient(
+    45deg,
+    rgb(16, 58, 240) 100%,
+    rgb(16, 58, 240) 0px
+  );
+  background-position: 0 0.4em;
+}
+
+.attributeCard {
+  display: flex;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  border: 1px solid rgb(58, 60, 66);
+  border-left: none;
+  border-right: none;
+
+  width: 100%;
+  height: fit-content;
+}
+
+.attributeCard:hover {
+  cursor: none;
+}
+
+.attributeCard:hover .learnCursorBG {
+  visibility: visible;
+}
+
+#longevityCursorBG {
+  background: url("../Assets/Attributes BG/longevity.webp");
+  background-size: cover;
+}
+
+#webdevCursorBG{
+    background: url("../Assets/Attributes BG/webdev.webp");
+  background-size: cover;
+}
+
+#designCursorBG{
+    background: url("../Assets/Attributes BG/design.webp");
+  background-size: cover;
+}
+
+#onBrandCursorBG{
+    background: url("../Assets/Attributes BG/onBrand.webp");
+  background-size: cover;
+}
+
+#solutionCursorBG{
+    background: url("../Assets/Attributes BG/solution.webp");
+  background-size: cover;
+}
+
+#partnershipCursorBG{
+    background: url("../Assets/Attributes BG/partnership.webp");
+  background-size: cover;
+}
+
+
+.attributeCardTitle {
+  width: 47%;
+  height: 100%;
+
+  /* border: 2px solid greenyellow; */
+}
+
+.attributeCardTitle h1 {
+  color: white;
+
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: -0.778846px;
+  line-height: 64.2667px;
+}
+
+.attributeCardDescWrapper {
+  width: 60%;
+  height: 100%;
+}
+
+.attributeCardDescWrapper {
+  width: 60%;
+  height: 100%;
+}
+
+.attributeCardDesc {
+  width: 67%;
+
+  /* border: 2px solid gold; */
+}
+
+.attributeCardDesc span {
+  color: white;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27.9px;
+}
