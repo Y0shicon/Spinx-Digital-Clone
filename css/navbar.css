@@ -191,7 +191,7 @@ height: 18px;
 }
 
 .hamburger {
-  border: 2px solid firebrick;
+  /* border: 2px solid firebrick; */
   position: absolute;
   right: 2%;
   display: none;
