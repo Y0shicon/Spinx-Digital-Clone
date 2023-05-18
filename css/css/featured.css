@@ -1,0 +1,250 @@
+.featuredContainer {
+  position: relative;
+
+  width: 100%;
+  height: fit-content;
+
+  /* border: 2px solid wheat; */
+}
+
+.featuredProjTitle {
+  background: linear-gradient(90deg, #a2aaf0, #a88fef 50.56%, #cd32e3);
+  background-clip: border-box;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  color: transparent;
+  text-align: right;
+
+  font-size: calc(27.3239px + 3.38028vw);
+
+  margin-right: 6%;
+  float: right;
+
+  margin-bottom: 50px;
+
+  display: inline;
+
+  /* border: 2px solid gold; */
+}
+
+.projectTitle {
+  position: absolute;
+
+  /* border: 2px solid purple; */
+
+  width: 42%;
+  /* height: 81%; */
+
+  left: 0%;
+  top: 70px;
+  bottom: 70px;
+
+  z-index: 2;
+}
+
+.projectCards {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  position: relative;
+
+  width: 88%;
+  left: 6%;
+  height: 50vw;
+  /* height: fit-content; */
+
+  /* padding-bottom: 7vh; */
+
+  /* border: 2px solid palegreen; */
+
+  z-index: 1;
+}
+
+.projectStickyText {
+  position: sticky;
+  top: 8%;
+}
+
+.projectCards .smallText span {
+  padding: 62px 120px 0 0;
+  line-height: 1.55;
+  color: #d6d6db;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.projectCards .largeText {
+  margin-top: 15px;
+}
+
+.projectCards .largeText h3 {
+  letter-spacing: -0.25px;
+  margin-bottom: 16px;
+  line-height: 1.33;
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.projectImgBox {
+  background-color: rgb(62, 34, 104);
+
+  float: right;
+
+  /* border: 2px solid red; */
+
+  position: relative;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  aspect-ratio: 1.473;
+  /* height: 100%; */
+  width: 66%;
+
+  z-index: 1;
+}
+
+.projectImg {
+  /* border: 2px solid blue; */
+
+  position: relative;
+
+  width: 70%;
+  height: fit-content;
+}
+
+.projectCards img {
+  width: 100%;
+}
+
+/* Content for the white project */
+#woke {
+  width: 100%;
+  left: 0;
+
+  background-color: white;
+}
+
+#woke .projectTitle {
+  left: 6%;
+  width: 37%;
+}
+
+#woke .projectImgBox {
+  left: -6%;
+  width: 59%;
+}
+
+#woke .largeText h3 {
+  color: black;
+
+  line-height: 1.33;
+  letter-spacing: -0.25px;
+
+  font-size: calc(17.0704px + 1.31455vw);
+  font-weight: 600;
+}
+
+#woke span {
+  color: rgb(109, 111, 120);
+}
+
+#woke .projectImgBox {
+  background-color: rgb(221, 229, 239);
+}
+
+/* Final Content */
+#appartment .projectImgBox {
+  background-color: rgb(42, 44, 48);
+}
+
+#appartment .projectTitle {
+  width: 42%;
+}
+
+h2.featured_highlight {
+  display: inline;
+  float: right;
+
+  color: white;
+  text-decoration: none;
+
+  background-image: linear-gradient(45deg, #6d6f78 100%, #6d6f78 0);
+  background-position: 10% 0.9em;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  transition: all 0.4s ease;
+}
+
+h2.featured_highlight:hover {
+  background-image: linear-gradient(45deg, #103af0 100%, #103af0 0);
+  background-position: 10% 0.6em;
+}
+
+h2.featured_highlight a {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -0.15px;
+}
+
+@media (max-width: 1000px) {
+  .projectCards,
+  #woke,
+  #appartment {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-self: center;
+
+    height: fit-content;
+  }
+
+  .projectTitle,
+  #appartment .projectTitle {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 0;
+    order: 2;
+  }
+
+  .projectImgBox,
+  #appartment .projectImgBox {
+    order: 1;
+    width: 100%;
+
+    margin-bottom: 0;
+  }
+
+  #woke .projectTitle {
+    position: relative;
+
+    left: 0;
+
+    width: 88%;
+
+    margin-top: 0;
+    order: 2;
+  }
+
+  #woke .projectImgBox {
+    width: 80%;
+    left: 0;
+  }
+
+  .projectCards span {
+    font-size: 16px;
+  }
+
+  .projectCards h3 {
+    font-size: 22px;
+  }
+}
