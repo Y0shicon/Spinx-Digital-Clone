@@ -1,1 +1,2 @@
-# FrontEnd_DVM_Task2.io
+# This is a clone of the Spinx-digital Website
+https://www.spinxdigital.com/
